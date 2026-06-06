@@ -1,0 +1,43 @@
+/* =========================================
+   VARIABLES CSS (design system)
+   ========================================= */
+
+:root {
+
+
+    /* Couleur principale (CTA) */
+    --color-primary: #e65823;
+
+    /* Hover / actif */
+    --color-primary-hover: #d94e1f;
+
+    /* Version soft (focus, background léger) */
+    --color-primary-soft: rgba(230, 88, 35, 0.1);
+
+    /* Branding */
+    --color-secondary: #182a48;
+
+    /* Texte */
+    --color-text: #1a1a1a;
+    --color-text-muted: #6c757d;
+
+    /* Fond */
+    --color-background: #ffffff;
+    --color-surface: #f6f5f4;
+    --color-surface-soft: #fafafa;
+
+    /* Bordures */
+    --color-border: #e5e5e5;
+    --color-border-soft: #dddddd;
+
+    /* Rayons */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+
+    /* Ombres */
+    --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    /* Padding */
+    --container-padding: 30px;
+}

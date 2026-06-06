@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+
+                <!-- Titre principal -->
+                <h1 class="hero-title">Achetez <br>facilement ici</h1>
+
+                <!-- Texte d’introduction -->
+                <p class="hero-subtitle">
+                    Découvrez et achetez des <br> produits en toute confiance.
+                </p>
+
+                <!-- Boutons d’action -->
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="{% url 'boutique' %}">Explorer le catalogue</a>
+                    <a class="btn btn-secondary" href="{% url 'vendeur' %}">Créer votre boutique</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECTION CATEGORIES
+        ========================== -->
+        <section class="category-section">
+
+            <!-- Carte catégorie : Électronique -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Électronique</h3>
+                    <p>Téléphones, ordinateurs <br> & accessoires</p>
+                </div>
+                <img src="{% static 'images/electro.png' %}" alt="Catégorie électronique">
+            </a>
+
+            <!-- Carte catégorie : Mode -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Mode</h3>
+                    <p>Vêtements, chaussures <br> & accessoires</p>
+                </div>
+                <img src="{% static 'images/mode.png' %}" alt="Catégorie mode">
+            </a>
+
+            <!-- Carte catégorie : Maison -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Maison</h3>
+                    <p>Meubles & décoration</p>
+                </div>
+                <img src="{% static 'images/maison.png' %}" alt="Catégorie maison">
+            </a>
+
+            <!-- Carte catégorie : Beauté -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Beauté</h3>
+                    <p>Cosmétiques & <br> soins personnels</p>
+                </div>
+                <img src="{% static 'images/beaute.png' %}" alt="Catégorie beauté">
+            </a>
+
+            <!-- Carte catégorie : Livres -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Livre & Papeterie</h3>
+                    <p>Livres, cahiers & fournitures</p>
+                </div>
+                <img src="{% static 'images/livre.png' %}" alt="Catégorie livres et papeterie">
+            </a>
+        </section>
+
+        <!-- =========================
+             SECTION PRODUITS POPULAIRES
+        ========================== -->
+        <section class="product-section">
+
+            <!-- En-tête de section -->
+            <div class="section-header">
+                <h2>Produits populaires</h2>
+
+                <a href="{% url 'boutique' %}" class="see-more">
+                    <span>Voir tout</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <!-- Grille de produits -->
+            <div class="product-grid">
+
+                {% for product in products %}
+                    <article class="product-card">
+                        <a href="" class="product-link"></a>
+                            <img src="{{ product.image.url }}" alt=" {{ product.name }}" class="product-image">
+
+                                <div class="product-info">
+                                    <h4 class="product-name">
+                                        {{ product.name }}
+                                    </h4>
+                                </div>
+                                
+                                <div class="product-badges">
+                                    <span class="stock">{{ product.stock }} restant</span>
+                                </div>
+
+                                <div class="product-main">
+                                    <span class="product-price">{{ product.price|floatformat:3 }} XAF</span>
+                                    <button class="add-to-cart">
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </div>
+                        </a>
+                    </article>
+                {% endfor %}
+
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+
+
+
+

@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées de base -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page -->
+    <title>{% block title %} {% endblock %}</title>
+    
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Bibliothèque d’icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+    <header class="site-header">
+        <img src="{% static 'images/logo.png' %}" alt="Logo Zando" class="site-logo">
+
+        <!-- Barre de recherche -->
+        <div class="search-box">
+            <input type="text" placeholder="Rechercher des produits..." aria-label="Rechercher des produits">
+                <!-- bouton clear -->
+            <button class="clear-btn" type="button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <button class="search-btn" type="button" aria-label="Lancer la recherche">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <nav class="site-nav" aria-label="Navigation principale">
+            <ul class="nav-list">
+                <li>
+                    <a href="{% url 'vendeur' %}" class="nav-link">Vendre</a>
+                </li>
+
+                <li>
+                    <a href="{% url 'compte' %}" class="nav-link nav-icon" aria-label="Compte">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'panier' %}" class="nav-link nav-icon" aria-label="Panier">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'produit' %}" class="nav-link nav-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+{% block content %} {% endblock %}    
+
+    <footer class="site-footer">
+
+        <!-- Appel à action vendeur -->
+        <div class="footer-cta">
+            <h3>Vous souhaitez aussi vendre des produits ?</h3>
+            <a href="{% url 'vendeur' %}" class="footer-cta-button">Créer votre boutique</a>
+        </div>
+
+        <!-- Arguments de confiance -->
+        <div class="footer-features">
+            <div class="footer-feature">
+                <i class="fa-solid fa-shield-halved"></i>
+                <p>Paiement sécurisé</p>
+            </div>
+
+            <div class="footer-feature">
+                <i class="fa-solid fa-truck"></i>
+                <p>Livraison rapide</p>
+            </div>
+
+            <div class="footer-feature">
+                <i class="fa-solid fa-phone"></i>
+                <p>Support local 24/7</p>
+            </div>
+
+            <div class="footer-feature">
+                <i class="fa-solid fa-store"></i>
+                <p>Vente simplifiée</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copy">
+            <p>© 2026 Zando. Tous droits réservés. Plateforme de marketplace au ...</p>
+        </div>
+        <div class="bar-bottom">
+
+        </div>
+    </footer>
+
+</body>
+</html>

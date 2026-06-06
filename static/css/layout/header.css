@@ -1,0 +1,106 @@
+/* =========================================
+   HEADER
+   ========================================= */
+
+.site-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 24px var(--container-padding);
+    background-color: var(--color-white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Logo du site */
+.site-logo {
+    width: 150px;
+}
+
+/* Input de recherche */
+.search-box {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    justify-self: center;
+    
+    height: 40px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.search-box:focus-within {
+  border-color: #f05a28;
+  box-shadow: 0 0 0 2px rgba(240, 90, 40, 0.1);
+}
+
+/* Input texte */
+.search-box input {
+    flex: 1;
+    min-width:0;
+    color: var(--color-text-muted);
+    border: none;
+    outline: none;
+    padding: 14px 6px;
+}
+
+.search-box input::placeholder {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.clear-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #999;
+    display: none; /* caché par défaut */
+}
+
+/* Bouton loupe */
+.search-btn {
+    border: none;
+    background: #f05a28;;
+    padding: 0 12px;
+    cursor: pointer;
+    border-left: 1px solid var(--border-color-soft);
+}
+
+.search-btn i {
+    color: white;
+}
+
+/* Navigation principale */
+.site-nav {
+    margin-left: auto;
+}
+
+/* Liste des liens */
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style des liens */
+.nav-link {
+    color: #000000;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Icônes utilisateur/panier */
+.nav-icon {
+    font-size: 18px;
+}

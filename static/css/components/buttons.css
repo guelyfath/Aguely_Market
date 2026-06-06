@@ -1,0 +1,39 @@
+/* =========================================
+   BOUTONS
+   ========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Bouton principal */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.btn-primary:hover {
+    background-color:  var(--color-surface);
+    color: #000000;
+}
+
+/* Bouton secondaire */
+.btn-secondary {
+    background-color: var(--color-surface);
+    color: #000000;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}

@@ -1,0 +1,54 @@
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    padding: 5px;
+    background-color: var(--color-surface);
+    margin-top: 30px;
+}
+
+/* Bandeau appel à action */
+.footer-cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+
+    background: #f8f9fa;
+    color: #333;
+    border-radius: var(--radius-md);
+}
+
+.footer-cta h3 {
+    color: black;
+}
+
+
+.footer-cta-button {
+    border: 1px solid #f05a28;
+    background: transparent;
+    padding: 12px 24px;
+    border-radius: var(--radius-sm);
+    color: black;
+}
+
+.footer-cta-button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.footer-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 30px;
+}
+
+.footer-copy {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin-top: 20px;
+}

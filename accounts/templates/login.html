@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Compte{% endblock %}
+
+{% block content %}
+
+
+    <main>
+        <!-- =========================
+             INTRO FORMULAIRE
+        ========================== -->
+        <section class="form-zone">
+            <div class="title-intro">
+                <h2>Connexion/S'inscrire</h2>
+                <p class="subtitle">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>Vos données sont protégées.</span>
+                </p>
+            </div>
+
+            <form class="form-login" action="" method="post">
+                {% csrf_token %}
+                
+                <label for="">Numéro ou adresse e-mail</label>
+                <input class="form-input" type="email">
+
+                <label for="">Mot de passe</label>
+                <input class="form-input" type="password">
+                
+                <label class="checkbox" for="">
+                    <input type="checkbox">
+                    <span>Se souvenir de moi</span>
+                </label>
+
+                <button class="btn-sub" type="submit">Se connecter</button>
+
+                <div class="form-footer">
+                    <a class="form-footer-link form-mdp-forget" href="">Mot de passe oublié ?</a>
+                    <p>
+                        Pas encore de compte ? 
+                        <a class="form-footer-link" href="{% url 'inscription' %}">Incrivez-vous</a>
+                    </p>
+                </div>
+            </form>
+
+        </section>
+
+    </main>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
