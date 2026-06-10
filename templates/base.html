@@ -40,11 +40,11 @@
         <nav class="site-nav" aria-label="Navigation principale">
             <ul class="nav-list">
                 <li>
-                    <a href="{% url 'vendeur' %}" class="nav-link">Vendre</a>
+                    <a href="{% url 'devenir_vendeur' %}" class="nav-link">Vendre</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'compte' %}" class="nav-link nav-icon" aria-label="Compte">
+                    <a href="{% url 'connexion' %}" class="nav-link nav-icon" aria-label="Compte">
                         <i class="fa-solid fa-user"></i>
                     </a>
                 </li>
@@ -56,7 +56,7 @@
                 </li>
 
                 <li>
-                    <a href="{% url 'produit' %}" class="nav-link nav-icon">
+                    <a href="{% url 'boutique' %}" class="nav-link nav-icon">
                         <i class="fa-solid fa-heart"></i>
                     </a>
                 </li>
@@ -71,7 +71,7 @@
         <!-- Appel à action vendeur -->
         <div class="footer-cta">
             <h3>Vous souhaitez aussi vendre des produits ?</h3>
-            <a href="{% url 'vendeur' %}" class="footer-cta-button">Créer votre boutique</a>
+            <a href="{% url 'devenir_vendeur' %}" class="footer-cta-button">Créer votre boutique</a>
         </div>
 
         <!-- Arguments de confiance -->
