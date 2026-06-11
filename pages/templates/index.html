@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+
+                <!-- Titre principal -->
+                <h1 class="hero-title">Achetez <br>facilement ici</h1>
+
+                <!-- Texte d’introduction -->
+                <p class="hero-subtitle">
+                    Découvrez et achetez des <br> produits en toute confiance.
+                </p>
+
+                <!-- Boutons d’action -->
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="{% url 'boutique' %}">Explorer le catalogue</a>
+                    <a class="btn btn-secondary" href="{% url 'devenir_vendeur' %}">Créer votre boutique</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             SECTION CATEGORIES
+        ========================== -->
+        <section class="category-section">
+
+            <!-- Carte catégorie : Électronique -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Électronique</h3>
+                    <p>Téléphones, ordinateurs <br> & accessoires</p>
+                </div>
+                <img src="{% static 'images/electro.png' %}" alt="Catégorie électronique">
+            </a>
+
+            <!-- Carte catégorie : Mode -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Mode</h3>
+                    <p>Vêtements, chaussures <br> & accessoires</p>
+                </div>
+                <img src="{% static 'images/mode.png' %}" alt="Catégorie mode">
+            </a>
+
+            <!-- Carte catégorie : Maison -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Maison</h3>
+                    <p>Meubles & décoration</p>
+                </div>
+                <img src="{% static 'images/maison.png' %}" alt="Catégorie maison">
+            </a>
+
+            <!-- Carte catégorie : Beauté -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Beauté</h3>
+                    <p>Cosmétiques & <br> soins personnels</p>
+                </div>
+                <img src="{% static 'images/beaute.png' %}" alt="Catégorie beauté">
+            </a>
+
+            <!-- Carte catégorie : Livres -->
+            <a href="" class="category-card">
+                <div class="category-text">
+                    <h3>Livre & Papeterie</h3>
+                    <p>Livres, cahiers & fournitures</p>
+                </div>
+                <img src="{% static 'images/livre.png' %}" alt="Catégorie livres et papeterie">
+            </a>
+        </section>
+
+        <!-- =========================
+             SECTION PRODUITS POPULAIRES
+        ========================== -->
+        <section class="product-section">
+
+            <!-- En-tête de section -->
+            <div class="section-header">
+                <h2>Produits populaires</h2>
+
+                <a href="{% url 'boutique' %}" class="see-more">
+                    <span>Voir tout</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <!-- Grille de produits -->
+            <article class="product-card">
+
+                <div class="product-badge">-20%</div>
+                <button class="favorite-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <div class="product-image">
+                    <img src="{% static '/media/img2.jpg' %}" alt="iPhone 15 Pro Max">
+                </div>
+
+                <div class="product-info">
+                    <h3>iPhone 15 Pro Max 256 Go</h3>
+
+                    <div class="product-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.8</span>
+                    <small>(124)</small>
+                    </div>
+
+                    <p class="product-price">999 000 FCFA</p>
+                    <p class="old-price">1 250 000 FCFA</p>
+
+                    <div class="product-meta">
+                    <span><i class="fa-solid fa-store"></i> Zando Store</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Brazzaville</span>
+                    </div>
+
+                    <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Ajouter au panier
+                    </button>
+                </div>
+            </article>
+
+
+
+            </div>
+        </section>
+    </main>
+{% endblock %}
+
+
+
+
+

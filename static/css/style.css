@@ -12,6 +12,11 @@
 
 @import url("./components/buttons.css");
 
+
+
+/* Application Product */
+@import url("/products/static/css/cart.css");
+
 /* =========================================
    CATEGORIES
    ========================================= */
@@ -87,7 +92,7 @@
     padding: 0 var(--container-padding);
 }
 
-/* Carte produit */
+/* Carte produit
 .product-card {
     height: auto;
     display: flex;
@@ -109,7 +114,7 @@
     transform: translateY(-5px);
 }
 
-/* Image produit */
+Image produit 
 .product-image {
     width: 100%;
     height: 150px;
@@ -117,28 +122,28 @@
     margin-bottom: 0;
 }
 
-/* Prix produit */
+Prix produit 
 .product-price {
     color: var(--color-accent);
     font-size: 13px;
     font-weight: 700;
 }
 
-/* Nom produit */
+ Nom produit 
 .product-name {
     font-weight: 600;
     line-height: 1.3;
-    min-height: calc(1.3em * 1); /* hauteur exacte pour 2 lignes */
-    line-clamp: 1;                /* limite à 2 lignes */
-    -webkit-line-clamp: 1;        /* limite à 2 lignes */
-    -webkit-box-orient: vertical; /* orientation verticale */
+    min-height: calc(1.3em * 1); 
+    line-clamp: 1;                
+    -webkit-line-clamp: 1;        
+    -webkit-box-orient: vertical; 
     display: -webkit-box;
     overflow: hidden;
     margin-top:6px;
     margin-bottom: 0;
 }
 
-/* Localisation */
+Localisation 
 .product-badges {
     margin-top: 0px;
     color: var(--color-text-muted);
@@ -151,7 +156,7 @@
     align-items: center;
 }
 
-/* Bouton panier */
+Bouton panier 
 .add-to-cart {
     border: none;
     border-radius: 12px;
@@ -165,7 +170,7 @@
     background-color: var(--color-primary-hover);
 }
 
-
+ */
 
 
 /* ________________________________________________ */
