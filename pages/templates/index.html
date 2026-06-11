@@ -93,32 +93,42 @@
             </div>
 
             <!-- Grille de produits -->
-            <div class="product-grid">
+            <article class="product-card">
 
-                {% for product in products %}
-                    <article class="product-card">
-                        <a href="" class="product-link"></a>
-                            <img src="{{ product.image.url }}" alt=" {{ product.name }}" class="product-image">
+                <div class="product-badge">-20%</div>
+                <button class="favorite-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
 
-                                <div class="product-info">
-                                    <h4 class="product-name">
-                                        {{ product.name }}
-                                    </h4>
-                                </div>
-                                
-                                <div class="product-badges">
-                                    <span class="stock">{{ product.stock }} restant</span>
-                                </div>
+                <div class="product-image">
+                    <img src="{% static '/media/img2.jpg' %}" alt="iPhone 15 Pro Max">
+                </div>
 
-                                <div class="product-main">
-                                    <span class="product-price">{{ product.price|floatformat:3 }} XAF</span>
-                                    <button class="add-to-cart">
-                                        <i class="fa-solid fa-cart-plus"></i>
-                                    </button>
-                                </div>
-                        </a>
-                    </article>
-                {% endfor %}
+                <div class="product-info">
+                    <h3>iPhone 15 Pro Max 256 Go</h3>
+
+                    <div class="product-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.8</span>
+                    <small>(124)</small>
+                    </div>
+
+                    <p class="product-price">999 000 FCFA</p>
+                    <p class="old-price">1 250 000 FCFA</p>
+
+                    <div class="product-meta">
+                    <span><i class="fa-solid fa-store"></i> Zando Store</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Brazzaville</span>
+                    </div>
+
+                    <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Ajouter au panier
+                    </button>
+                </div>
+            </article>
+
+
 
             </div>
         </section>

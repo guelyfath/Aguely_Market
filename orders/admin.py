@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import orders
+from .models import Commande
 
 # Register your models here.
     
-admin.site.register(orders)
+admin.site.register(Commande)
