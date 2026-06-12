@@ -84,6 +84,7 @@
     color: var(--color-primary);
 }
 
+/* Grille produits */
 .product-grid {
     display: grid;
     /* grille responsive */
@@ -92,7 +93,7 @@
     padding: 0 var(--container-padding);
 }
 
-/* Carte produit
+/* Carte produit */
 .product-card {
     height: auto;
     display: flex;
