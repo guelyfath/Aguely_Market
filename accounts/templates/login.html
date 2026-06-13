@@ -21,14 +21,14 @@
             <form class="form-login" action="" method="post">
                 {% csrf_token %}
                 
-                <label for="">Numéro ou adresse e-mail</label>
-                <input class="form-input" type="email">
+                <label for="username">Numéro ou adresse e-mail</label>
+                <input class="form-input" type="email" id="username" name="username" placeholder="Entrez votre numéro ou adresse e-mail" required>
 
-                <label for="">Mot de passe</label>
-                <input class="form-input" type="password">
-                
-                <label class="checkbox" for="">
-                    <input type="checkbox">
+                <label for="password">Mot de passe</label>
+                <input class="form-input" type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+
+                <label class="checkbox" for="remember-me">
+                    <input type="checkbox" id="remember-me" name="remember-me">
                     <span>Se souvenir de moi</span>
                 </label>
 
